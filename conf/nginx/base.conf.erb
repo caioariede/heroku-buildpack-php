@@ -68,6 +68,9 @@ http {
         #Specify a charset
         charset utf-8;
 
+        port_in_redirect off;
+        server_name_in_redirect off;
+
         include site.conf;
 
         <% Shellwords.split(ENV['NGINX_INCLUDES'].to_s).each do |f| %>
